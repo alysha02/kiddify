@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiddify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MAIN -->
+  <section class="scene is-active" id="scene-main" aria-label="Main">
+    <div class="panel">
+      <h1 class="title">KIDDIFY</h1>
+      <p class="subtitle">PRESS TO START</p>
+      <button class="wood-btn wide" data-go="scene-menu">PRESS TO START</button>
+    </div>
+  </section>
+
+  <!-- MAIN MENU -->
+  <section class="scene" id="scene-menu" aria-label="Main Menu">
+    <div class="panel">
+      <h1 class="title">KIDDIFY</h1>
+
+      <div class="grid">
+        <button class="wood-btn" data-go="scene-play">PLAY</button>
+        <button class="wood-btn" data-go="scene-minigame">MINI-GAME</button>
+        <button class="wood-btn" data-go="scene-setting">SETTING</button>
+        <button class="wood-btn" data-go="scene-progress">PROGRESS</button>
+      </div>
+
+      <button class="wood-btn small" data-go="scene-main">BACK</button>
+    </div>
+  </section>
+
+  <!-- SETTING -->
+  <section class="scene" id="scene-setting" aria-label="Setting">
+    <div class="panel">
+      <h1 class="title">SETTING</h1>
+
+      <div class="stack">
+        <button class="wood-btn" data-go="scene-sound">SOUND</button>
+        <button class="wood-btn" data-go="scene-music">MUSIC</button>
+        <button class="wood-btn small" data-go="scene-menu">BACK</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOUND -->
+  <section class="scene" id="scene-sound" aria-label="Sound">
+    <div class="panel">
+      <h1 class="title">SOUND</h1>
+
+      <div class="row">
+        <button class="wood-btn" id="soundOn" type="button">ON</button>
+        <button class="wood-btn" id="soundOff" type="button">OFF</button>
+      </div>
+
+      <p class="status" id="soundState">Sound: ON</p>
+      <button class="wood-btn small" data-go="scene-setting">BACK</button>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="scene" id="scene-music" aria-label="Music">
+    <div class="panel">
+      <h1 class="title">MUSIC</h1>
+
+      <div class="row">
+        <button class="wood-btn" id="musicOn" type="button">ON</button>
+        <button class="wood-btn" id="musicOff" type="button">OFF</button>
+      </div>
+
+      <p class="status" id="musicState">Music: ON</p>
+      <button class="wood-btn small" data-go="scene-setting">BACK</button>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section class="scene" id="scene-play" aria-label="Play">
+    <div class="panel">
+      <h1 class="title">PLAY</h1>
+      <p class="subtitle">Choose a module</p>
+
+      <div class="row">
+        <button class="wood-btn" data-go="scene-alphabet">ALPHABET</button>
+        <button class="wood-btn" data-go="scene-number">NUMBER</button>
+      </div>
+
+      <button class="wood-btn small" data-go="scene-menu">BACK</button>
+    </div>
+  </section>
+
+  <!-- ALPHABET -->
+  <section class="scene" id="scene-alphabet" aria-label="Alphabet">
+    <div class="panel">
+      <h1 class="title">ALPHABET</h1>
+      <p class="subtitle">Prototype screen</p>
+      <div class="big">A</div>
+      <button class="wood-btn small" data-go="scene-play">BACK</button>
+    </div>
+  </section>
+
+  <!-- NUMBER -->
+  <section class="scene" id="scene-number" aria-label="Number">
+    <div class="panel">
+      <h1 class="title">NUMBER</h1>
+      <p class="subtitle">Prototype screen (0–10 next)</p>
+      <div class="big">0</div>
+      <button class="wood-btn small" data-go="scene-play">BACK</button>
+    </div>
+  </section>
+
+  <!-- MINI-GAME -->
+  <section class="scene" id="scene-minigame" aria-label="Mini-Game">
+    <div class="panel">
+      <h1 class="title">GAME</h1>
+      <p class="subtitle">Mini-game placeholder</p>
+
+      <div class="row">
+        <button class="wood-btn" id="game1" type="button">Tap the Correct</button>
+        <button class="wood-btn" id="game2" type="button">Match</button>
+      </div>
+
+      <button class="wood-btn small" data-go="scene-menu">BACK</button>
+    </div>
+  </section>
+
+  <!-- PROGRESS -->
+  <section class="scene" id="scene-progress" aria-label="Progress">
+    <div class="panel">
+      <h1 class="title">PROGRESS</h1>
+
+      <div class="progress">
+        <div class="pitem"><span>Numbers</span><b>40%</b></div>
+        <div class="pitem"><span>Alphabet</span><b>20%</b></div>
+        <div class="pitem"><span>Mini-Games</span><b>10%</b></div>
+      </div>
+
+      <button class="wood-btn small" data-go="scene-menu">BACK</button>
+    </div>
+  </section>
+
+  <!-- AUDIO (WAJIB) -->
+  <audio id="bgm" src="assets/audio/bgm.mp3" loop preload="auto"></audio>
+  <audio id="clickSfx" src="assets/audio/click.mp3" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
